@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div id="login-page" class="h-screen flex justify-center items-center">
+        <div class="bg-white p-8 rounded shadow-lg w-96">
+            <h1 class="text-2xl font-bold mb-4 text-center">Login</h1>
+            <div>
+                <label for="username" class="block mb-2">Username:</label>
+                <input type="text" id="username" class="border w-full px-3 py-2 rounded mb-4" placeholder="Ismingiz">
+            </div>
+            <div>
+                <label for="password" class="block mb-2">Password:</label>
+                <input type="password" id="password" class="border w-full px-3 py-2 rounded mb-4" placeholder="123">
+            </div>
+            <button id="login-btn" class="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Login</button>
+            <p id="error-msg" class="text-red-500 mt-4 text-center hidden">Login yoki parol xato!</p>
+        </div>
+    </div>
+
+    <div id="products-page" class="hidden p-6">
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-blue-700">Karkasnye</h1>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">+ Добавить продукт</button>
+        </header>
+        <table class="w-full bg-white rounded shadow-lg">
+            <thead>
+                <tr class="bg-gray-200 text-left">
+                    <th class="py-3 px-4">Изображение</th>
+                    <th class="py-3 px-4">Цена(сум)</th>
+                    <th class="py-3 px-4">Количество</th>
+                    <th class="py-3 px-4">Рамка</th>
+                    <th class="py-3 px-4">Размер(м)</th>
+                    <th class="py-3 px-4">Глубина(см)</th>
+                    <th class="py-3 px-4">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t">
+                    <td class="py-3 px-4">
+                        <img src="./Group 217 1.png" alt="product" class="h-16 w-16 object-cover rounded">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div>
+                            <p class="text-red-500 line-through text-sm">1.800.000 сум</p>
+                            <p class="text-black font-bold">1.520.000 сум</p>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">10</td>
+                    <td class="py-3 px-4">Металлический</td>
+                    <td class="py-3 px-4">2,7</td>
+                    <td class="py-3 px-4">60</td>
+                    <td class="py-3 px-4">
+                        <button class="text-green-500 hover:underline">Edit</button>
+                        <button class="text-red-500 hover:underline ml-2">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
